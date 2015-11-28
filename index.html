@@ -3,116 +3,107 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<title>Mae Fang</title>
 </head>
 
 <body>
-<!-- 	<nav>
-		<div id="logo">
-		<h2>Mae Fang </h2>
-		<ul>
-			<li>DEMO</li>
-			<li>ABOUT</li>
-			<li>CONTACT</li>
-		</ul>
-		</div>
-	</nav> -->
 
-<div class="navbar-fixed">
+  <div class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper">
-        <a href="#!" class="brand-logo">Logo</a>
+      <div class="nav-wrapper white">
+        <a href="#!" class="brand-logo center nav-text">Mae Fang</a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="sass.html">Sass</a></li>
-          <li><a href="badges.html">Components</a></li>
-          <li class="active"><a href="collapsible.html">JavaScript</a></li>
+          <li><a class="nav-text" href="#about-me">About</a></li>
+          <li class="active"><a class="nav-text" href="#project-area">Projects</a></li>
+          <li><a class="nav-text" href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
   </div>
 	
-	<main>
-		<img src="images/pic.jpg" alt="" class="photo">
-	</main>
+	<div>
+		<img src="images/header.jpg" alt="" class="photo">
+	</div>
 	
 	<div id="intro">
+    <h4 class="centered">Full stack web developer based in New York.</h4>
+  	
+    <p> I enjoy making things and making a difference. Following five years experience working for various nonprofits in New York City, I decided to immerse myself in studying web development, as a way to express creativity and build what I envision.</p>
 
-	<h1>Hello!</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid cumque, nisi optio a ratione excepturi deserunt ducimus ipsa natus asperiores in aut distinctio nostrum nihil nulla, voluptates ab ea explicabo!</p>
-
-	<p id="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint rem ut reiciendis itaque ea cupiditate vel, optio alias quis dolores, maxime assumenda corrupti corporis, officiis perspiciatis provident velit omnis porro.</p>
-	
+    <br/>
+    
+    <p>Likes: Javascript, in particular using a single language to build web applications with node.js/Express and AngularJS. Relational databases like PostgreSQL. The ease of encypting user logins with Ruby on Rails. Troubleshooting code. Check out some projects below.</p>	
 	</div>
+ 
 
-	<div id="projects">
+  <div id="projects" class="bg">
+         <hr class="styleline">  <a name="project-area">
+<br>
+        <div class="blacktext center-align">
+          <img class="project-image responsive-img center-block" src="images/sensus-mood-app.png"> 
+          <h4 class="blacktext">MTA Elevator and Escalator Outages</h4>
+          <p><a href="https://still-ravine-3077.herokuapp.com/">Live Site   |</a><a href="https://github.com/mmmfang/mta-elevators">    View code on Github</a></p>
+          <p>Built a MEAN stack app for tracking which NYC subway escalators and elevators were out of service.</p>
+        </div>
 
-MATERIALIZE CARD FUNCTION
-<div class="row">
-  <div class="card col s4">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
+<br>
+<hr class="styleline">
+<br>
+        <div class=" blacktext center-align">
+          <img class="project-image responsive-img center-block" src="images/sensus-mood-app.png"> 
+          <h4>Mood App</h4>
+          <p><a href="https://frozen-bastion-8818.herokuapp.com">Live Site |</a><a href="https://github.com/mmmfang/queens">View code on Github</a></p>
+          <p>Team of 3 built a Rails and AngularJS app that would tracked user moods using emojis.</p>
+        </div>
+<br>
+<hr class="styleline">
+<br>
+        <div class=" blacktext center-align">
+          <img class="project-image responsive-img center-block" src="images/bauble_welcome_page.png"> 
+          <h4>Case Study: Forum</h4>
+          <p><a href="https://frozen-bastion-8818.herokuapp.com">Live Site  |</a><a href="https://github.com/mmmfang/project-two">  View code on Github</a></p>
+          <p>With BaubleBar as my case study, I built a forum using MongoDB, node.js and Express for their customers to interact.</p>
+        </div>
+
+<br>
+<hr class="styleline">
+<br>
+        <div class="blacktext center-align">
+          <img class="responsive-img center-block" src="images/recipe-box.png"> 
+          <h4>Recipe Box</h4>
+          <p><a href="https://recipe-box-app.herokuapp.com">Live Site  | </a><a href="https://github.com/mmmfang/recipes">View code on Github</a></p>
+          <p>A CRUD App built with Rails and AngularJS that acts like a digital recipe box. </p>
+        </div>
+       
   </div>
 
-  <div class="card col s4">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-  </div>
-	
-  <div class="card col s4">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-  </div>
-</div>	
+</div>
 
-	</div>
+<hr class="styleline">
+<div class="contact-area">
+  <br/>
 
-	<div id="contact">
+    <h4 class="whitetext">Get in Contact</h4>
+    <a class="whitetext right-align" href="email">Email</a>
+    <br/>
+	  <a class="whitetext right-align" href="https://github.com/mmmfang">Github</a> 
+	  <br/>
+    <a class="whitetext right-align" href="">LinkedIn</a>
 
-	Email: mff
-	Social Media buttons?
-	Github: mmmfang
-	Linkedin: 
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint rem ut reiciendis itaque ea cupiditate vel, optio alias quis dolores, maxime assumenda corrupti corporis, officiis perspiciatis provident velit omnis porro.</p>
-	
-	</div>
+
+
 	<footer>
 		Site by Mae Fang - 2015
 	</footer>
-	<script src="app.js"></script>
+
+</div>
+
+	<script src="scripts/app.js"></script>
 </body>
 </html>

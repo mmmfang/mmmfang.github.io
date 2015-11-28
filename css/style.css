@@ -4,48 +4,73 @@
 	box-sizing: border-box;
 }
 
-nav {
+.nav-text {
+	color:black;
+}
 
-	background-color:white;
-	font-color: black;
-/*		position: fixed;
+.brand-logo {
+	color:black!important;
+}
+
+.centered {
 	text-align: center;
-	height:80px;
-	top:0;
-	transition: .2s;
-	width: 100%;
-*/}
+}
 
 #intro{
-	padding:100px;
-	text-align: center;
+	padding:30px;
 }
 
-#second p {
-	padding: 30px;
-	line-height: 1.8;
+.blacktext {
+	color: black!important;
+
 }
 
 
+hr.styleline {
+
+height: 10px;
+margin-left: auto;
+margin-right: auto;
+background-color:deeppink;
+color:white;
+border: 0 none;
+}
+
+.whitetext {
+	color: white!important;
+
+}
 
 .photo {
 	width:100%;
 }
 
-ul {
+.project-image{
+	width: 800px;
+
+}
+
+.bg {
+	background-color: floralwhite;
+}
+
+.contact-area {
+	background-color: deeppink;
+}
+
+
+/*ul {
 	text-align: right;
 }
 
 li {
 	display: inline;
 	color:black;
-	margin-right: 20px;
-}
+
+}*/
 
 ul li:hover {
 	cursor: pointer;
-	border-bottom: 1px solid black;
-	padding-bottom: 8px;
 }
 
 footer {
