@@ -28,10 +28,10 @@
 
 hr.styleline {
 
-height: 10px;
+height: 1px;
 margin-left: auto;
 margin-right: auto;
-background-color:deeppink;
+background-color:lightgrey;
 color:white;
 border: 0 none;
 }
