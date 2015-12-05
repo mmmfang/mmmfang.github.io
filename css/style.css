@@ -77,6 +77,11 @@ li {
 	padding-left: 10px;
 }
 
+.pad-left-bottom {
+	padding-left: 10px;
+	padding-bottom: 7px;
+}
+
 ul li:hover {
 	cursor: pointer;
 }
