@@ -41,12 +41,34 @@ border: 0 none;
 
 }
 
+
 .photo {
 	width:100%;
 }
 
+.project-section {
+	height: 650px;
+	margin: 0 auto;
+
+}
+
+.slider, .slides {
+	height: 600px!important;
+	text-align: center;
+	background-color: white!important;
+
+}
+
+/*.full-slide {
+	width: 100%;
+	height: 600px!important;
+	text-align: center;
+
+}*/
+
 .project-image{
-	width: 800px;
+	width: 800px!important;
+	height: 517px!important;
 
 }
 
