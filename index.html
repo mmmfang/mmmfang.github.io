@@ -30,17 +30,15 @@
 	
 	<div>
 		<img src="images/Header.jpg" alt="" class="photo">
-  <a name="about-me">
+    <a name="about-me">
 	</div>
 	
-
-	<div id="intro">
-    
-    <h4 class="centered">Full stack web developer based in New York.</h4>
+	<div id="intro">  
+    <h4 class="centered blacktext">Full stack web developer based in New York.</h4>
   	
     <p> I enjoy making things and making a difference. After working for various nonprofits in New York City, I decided to immerse myself in studying web development as a way to express creativity and build what I envision. Below are a few of my projects.</p>
 
-<a name="project-area"> 
+    <a name="project-area"> 
     <br/>
     <br/>
     
@@ -50,33 +48,63 @@
   <div class="slider">
     <ul class="slides">
 
+<!-- FIRST SLIDE AND MODAL - MTA APP -->
       <li>
-        <img class="project-image" src="images/mta-app.png"> 
-<!--           <p><a href="https://mta-outages.herokuapp.com/">Live Site   |</a><a href="https://github.com/mmmfang/mta-elevators">    View code on Github</a></p>
-
-          <p>Built a MEAN stack app to track which NYC subway escalators and elevators were out of service.</p> -->
+        <img class="project-image modal-trigger" href="#modal1" src="images/mta-app.png"> 
       </li>
 
-      <li>
-        <img class="project-image" src="images/sensus-mood-app.png">
-<!--           <p><a href="https://frozen-bastion-8818.herokuapp.com">Live Site  | </a><a href="https://github.com/mmmfang/queens"> View code on Github</a></p>
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4 class="blacktext">MTA Outages App</h4>
+          <p><a href="https://mta-outages.herokuapp.com/">Live Site   |</a><a href="https://github.com/mmmfang/mta-elevators">    View code on Github</a></p>
 
-          <p>Along with <a href="http://www.dinahbakeer.com">Dinah </a>and <a href="http://www.shulihallak.com">Shuli</a>, built a Rails and AngularJS app that tracked user moods using emojis.</p> -->
+          <p>Built a MEAN stack app to track which NYC subway escalators and elevators were out of service.</p>
+        </div>
+      </div>
+
+<!-- SECOND SLIDE AND MODAL - MOOD APP -->
+
+      <li>
+        <img class="project-image modal-trigger" href="#modal2" src="images/sensus-mood-app.png">
       </li>
+      
+      <div id="modal2" class="modal">
+        <div class="modal-content">
+          <h4>Sensus - A Mood Tracking App</h4>
+          <p><a href="https://frozen-bastion-8818.herokuapp.com">Live Site  | </a><a href="https://github.com/mmmfang/queens"> View code on Github</a></p>
 
-      <li>
-        <img class="project-image" src="images/bauble_welcome_page.png"> 
-<!--           <p><a href="https://still-ravine-3077.herokuapp.com/">Live Site  |</a><a href="https://github.com/mmmfang/project-two">  View code on Github</a></p>
+          <p>Along with <a href="http://www.dinahbakeer.com">Dinah </a>and <a href="http://www.shulihallak.com">Shuli</a>, built a Rails and AngularJS app that tracked user moods using emojis.</p> 
+        </div>
+      </div>
 
-          <p>With BaubleBar as my case study, I built a forum for their customers to interact, using MongoDB, Node.js and Express.</p> -->
+<!-- THIRD SLIDE AND MODAL - BAUBLEBAR FORUM -->
+<!--       <li>
+        <img class="project-image modal-trigger" href="#modal3" src="images/bauble_welcome_page.png"> 
       </li >
 
-      <li>
-        <img class="project-image" src="images/recipe-box.png"> 
-<!--           <p><a href="https://recipe-box-app.herokuapp.com">Live Site  | </a><a href="https://github.com/mmmfang/recipes">View code on Github</a></p>
-          
-          <p>A CRUD App built with Rails and AngularJS that acts like a digital recipe box.</p> -->
+      <div id="modal3" class="modal">
+        <div class="modal-content">
+          <h4>Case Study - Forum</h4>
+          <p><a href="https://still-ravine-3077.herokuapp.com/">Live Site  |</a><a href="https://github.com/mmmfang/project-two">  View code on Github</a></p>
+
+          <p>With BaubleBar as my case study, I built a forum for their customers to interact, using MongoDB, Node.js and Express.</p> 
+        </div>
+      </div>
+ -->
+<!-- FOURTH SLIDE AND MODAL - RECIPE BOX -->
+<!--       <li>
+        <img class="project-image modal-trigger" href="#modal4" src="images/recipe-box.png"> 
       </li>
+
+      <div id="modal4" class="modal">
+        <div class="modal-content">
+          <h4>Recipe Box</h4>
+          <p><a href="https://recipe-box-app.herokuapp.com">Live Site  | </a><a href="https://github.com/mmmfang/recipes">View code on Github</a></p>
+        
+          <p>A CRUD App built with Rails and AngularJS that acts like a digital recipe box.</p> 
+        </div>
+      </div>
+ -->
 
     </ul>
   </div>
