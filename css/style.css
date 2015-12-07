@@ -35,8 +35,7 @@ hr.styleline {
 }
 
 .header-top {
-	padding-bottom: 0px;
-	margin-bottom: 0px;
+	line-height: 0px;
 }
 
 #intro{
@@ -55,6 +54,7 @@ hr.styleline {
 	padding-left: 15%;
 	padding-right: 15%;
 	font-family: 'Open Sans', sans-serif;
+	line-height: 35px;
 }
 
 .serif {
@@ -73,6 +73,7 @@ ul li:hover {
 	height: 630px;
 	margin: 0 auto;
 	text-align: center;
+	background-color: floralwhite;
 }
 
 .project-image{
@@ -83,7 +84,7 @@ ul li:hover {
 
 .slider .slides li {
 	height: 517px!important;
-	background-color: white!important;
+	background-color: floralwhite!important;
 }
 
 .bg {
@@ -96,6 +97,9 @@ ul li:hover {
 	background-color: deeppink;
 }
 
+.contact {
+	display:inline-block;
+}
 
 .pad-left {
 	padding-left: 15px;
@@ -106,7 +110,15 @@ ul li:hover {
 	padding-bottom: 7px;
 }
 
+.headshot {
+	float:right;
+	padding-right:25px;
+	display:inline-block;
+}
 
+.headshot-pic {
+	border-radius: 50%;
+}
 
 footer {
 	text-align: center;
