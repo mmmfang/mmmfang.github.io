@@ -16,10 +16,6 @@
 	text-align: center;
 }
 
-#intro{
-	padding:30px;
-}
-
 .blacktext {
 	color: black!important;
 }
@@ -38,15 +34,43 @@ hr.styleline {
 	color: white!important;
 }
 
+.header-top {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+#intro{
+	margin-top:0px;
+	padding: 30px;
+	background-color: #1291B2;
+}
 
 .photo {
 	width:100%;
+	margin-bottom:0px;
+	padding-bottom:0px;
+}
+
+.aboutpara {
+	padding-left: 15%;
+	padding-right: 15%;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.serif {
+	font-family: 'PT Serif', serif;
+
 }
 
 /*Slider Section*/
 
+ul li:hover {
+	cursor: pointer;
+}
+
 .project-section {
-	height: 600px;
+	padding-top: 45px;
+	height: 630px;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -62,35 +86,32 @@ hr.styleline {
 	background-color: white!important;
 }
 
-
 .bg {
 	background-color: floralwhite;
 }
 
-.blkbg {
-	background-color: black;
-}
+
 
 .contact-area {
 	background-color: deeppink;
 }
 
 
-
-
 .pad-left {
-	padding-left: 10px;
+	padding-left: 15px;
 }
 
 .pad-left-bottom {
-	padding-left: 10px;
+	padding-left: 15px;
 	padding-bottom: 7px;
 }
 
-ul li:hover {
-	cursor: pointer;
-}
+
 
 footer {
 	text-align: center;
+}
+
+.blkbg {
+	background-color: black;
 }
