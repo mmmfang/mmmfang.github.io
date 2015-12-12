@@ -75,7 +75,7 @@ ul li:hover {
 
 .project-section {
 	padding-top: 45px;
-	height: 630px;
+	height: 600px;
 	margin: 0 auto;
 	text-align: center;
 	background-color: floralwhite;
@@ -87,8 +87,13 @@ ul li:hover {
 }
 
 
-.slider .slides li {
+.slides li {
 	height: 517px!important;
+	background-color: floralwhite!important;
+}
+
+.slider {
+	height: 550px!important;
 	background-color: floralwhite!important;
 }
 
