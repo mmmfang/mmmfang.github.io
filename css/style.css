@@ -62,7 +62,12 @@ hr.styleline {
 
 }
 
+
 /*Slider Section*/
+
+.modal-title {
+	color: #336666;
+}
 
 ul li:hover {
 	cursor: pointer;
