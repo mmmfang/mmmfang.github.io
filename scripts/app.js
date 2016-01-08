@@ -1,27 +1,15 @@
-//SLIDER WILL INITIALIZE UPON ENTERING SITE
-    $(document).ready(function(){
-      $('.slider').slider({full_width: true});
-
-    });
-        
-//MODAL TRIGGER  
-   $(document).ready(function(){
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-    $('.modal-trigger').leanModal();
-  });
-       
 //ANGULAR
 var app = angular.module('personalSite', ['ngRoute']);
 
-app.controller("MainController", [$scope, function($scope){
+app.controller("MainController", ['$scope', function($scope){
 	$scope.name = "Mae"	
 }]);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-  $locationProvider.html5Mode({enabled:true});
+  $locationProvider.html5Mode({enabled:false});
 
   $routeProvider.
-    when('/about',
+    when('/',
     { templateUrl: '/main.html',
         controller: 'MainController',
         controllerAs: 'mainCtrl'
@@ -45,5 +33,4 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
       { redirectTo: '/'
     });
  }]) ;
-
 
