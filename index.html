@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="personalSite">
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="css/style.css">
@@ -11,104 +11,15 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 </script>
 
+  <base href='/'> </base>
+  
 	<title>Mae Fang - Web Developer</title>
 </head>
 
-<body><a name="top">
+<body>
 
-<!-- NAVBAR -->
-  <div class="navbar-fixed">
-    <nav>
-      <div class="nav-wrapper white">
-        <a href="#top" class="brand-logo center nav-text">Mae Fang</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a class="nav-text" href="#about-me">About</a></li>
-          <li><a class="nav-text" href="#project-area">Projects</a></li>
-          <li><a class="nav-text" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-	
-	<div class="header-top"><img src="images/Header.jpg" alt="header" class="photo"><a name="about-me"></div>
-	
-	<div id="intro">  
-    <br/>
-    <br/>
-    <br/>
-    <h4 class="centered serif whitetext">Full stack web developer based in New York City.</h4>
-  	<br/>
-    
-    <h5 class="aboutpara whitetext"> I enjoy making things and making a difference. After working at various nonprofits in New York City for five years, I decided to immerse myself in studying web development as a way to express creativity and build what I envision. Likes: AngularJS, full stack Javascript, PostgreSQL and the ease of encrypting user logins in Rails, but mostly I just like learning and developing applications with a real-world focus.
-    <br/>
-    <br/>
-    <em>Currently working on:</em> Creating my first IOS and Android apps using Ionic. To view some of my projects, click below.</h5><a name="project-area"> 
+ <div ng-view></div>
 
-    
-    
-    <br/>
-    <br/>
- 
-
-	</div>
-    <br/>
-    <br/>
-
- <div class="project-section">
-  <div class="slider">
-    <ul class="slides">
-
-<!-- FIRST SLIDE AND MODAL - MTA APP -->
-      <li>
-        <img class="project-image" href="projects.html" src="images/mta-app.png"> 
-      </li>
-
-<!-- SECOND SLIDE AND MODAL - MOOD APP -->
-
-      <li>
-        <img class="project-image" href="/projects.html" src="images/sensus-mood-app.png">
-      </li>
-
-<!-- THIRD SLIDE AND MODAL - BAUBLEBAR FORUM -->
-      <li>
-        <img class="project-image" href="/projects.html" src="images/bauble_welcome_page.png"> 
-      </li >
-<!-- FOURTH SLIDE AND MODAL - RECIPE BOX -->
-      <li>
-        <img class="project-image" href="/projects.html" src="images/recipe-box.png"> 
-      </li>
-
-    </ul>
-  </div>
-  <br/>
-  <br/>
-</div>
-
-<!-- MODAL SECTIONS-->
-
-
-
-      <div id="modal2" class="modal">
-        <div class="modal-content centered">
-          <h4 class="serif modal-title">Sensus - A Mood Tracking App</h4>
-          <p><a href="https://frozen-bastion-8818.herokuapp.com">Live Site  | </a><a href="https://github.com/mmmfang/queens"> View code on Github</a></p>
-          <br/>
-          <p>In a team of three along with <a href="http://www.dinahbakeer.com">Dinah </a>and <a href="http://www.shulihallak.com">Shuli</a>, we built a Rails and AngularJS app that tracked user moods using emojis.</p> 
-        </div>
-      </div>
-
-      <div id="modal3" class="modal">
-        <div class="modal-content centered">
-          <h4 class="serif modal-title">Case Study - Forum</h4>
-          <p><a href="https://still-ravine-3077.herokuapp.com/">Live Site  |</a><a href="https://github.com/mmmfang/project-two">  View code on Github</a></p>
-          <br/>
-          <p>With BaubleBar as my case study, I built a forum for their customers to interact, using MongoDB, Node.js and Express.</p> 
-        </div>
-      </div>
-
-
-
-      
 <hr class="styleline">
 <div class="contact-area">
   <a name="contact">
@@ -124,7 +35,7 @@
       <i class="fa fa-linkedin-square whitetext fa-2x pad-left-bottom"></i> <a class="white-text right-align pad-left-bottom" href="http://www.linkedin.com/in/maefang">  https://www.linkedin.com/in/maefang</a>
       <br/>
       <br/>      
-<!--       <i class="fa fa-phone white-text fa-2x pad-left-bottom"></i><span class="pad-left-bottom whitetext">  (518) 712-9466</span> -->
+
     </div>
 
     <div class="headshot">
