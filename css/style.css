@@ -137,3 +137,13 @@ footer {
 .blkbg {
 	background-color: black;
 }
+
+/*	@media screen and (max-width: 500px) { 
+		#project-page-text {
+			float:left!important;
+		}
+		.project-page-img{
+			float:left!important;
+		}
+	 }*/
+
