@@ -153,5 +153,11 @@ footer {
 
 /*Project Page Section*/
 #proj-page-title {
-	color: white!important;
+	
+	position: absolute;
+    color: white!important;
+    display: inline-block;
+    font-size: 2.1rem;
+    padding: 0;
+    white-space: nowrap; 
 }
