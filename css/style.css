@@ -86,7 +86,6 @@ ul li:hover {
 	height: 517px!important;
 }
 
-
 .slides li {
 	height: 517px!important;
 	background-color: floralwhite!important;
@@ -101,7 +100,10 @@ ul li:hover {
 	background-color: floralwhite;
 }
 
-
+.hidden {
+	display:none;
+}
+/*Contact Footer Section*/
 
 .contact-area {
 	background-color: deeppink;
@@ -146,6 +148,10 @@ footer {
 			float:left!important;
 		}
 	 }*/
+
+
+
+/*Project Page Section*/
 #proj-page-title {
 	color: white!important;
 }
