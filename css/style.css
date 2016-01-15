@@ -65,6 +65,10 @@ hr.styleline {
 
 /*Slider Section*/
 
+.floralwhitebg {
+	background-color: floralwhite;
+}
+
 .modal-title {
 	color: #336666;
 }
