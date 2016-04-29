@@ -20,7 +20,6 @@
 	color: black!important;
 }
 
-
 hr.styleline {
 	height: 1px;
 	margin-left: auto;
@@ -57,11 +56,16 @@ hr.styleline {
 	line-height: 35px;
 }
 
-.serif {
-	font-family: 'PT Serif', serif;
 
+@media only screen and (max-device-width: 736px) {
+	.aboutMobileSetting {
+		padding: 5%;
+	}
 }
 
+.serif {
+	font-family: 'PT Serif', serif;
+}
 
 /*Slider Section*/
 
