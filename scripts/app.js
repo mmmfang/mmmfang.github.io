@@ -1,8 +1,8 @@
 //SLIDER WILL INITIALIZE UPON ENTERING SITE
-    $(document).ready(function(){
-      $('.slider').slider({full_width: true});
+    // $(document).ready(function(){
+    //   $('.slider').slider({full_width: true});
 
-    });
+    // });
         
 //MODAL TRIGGER  
    $(document).ready(function(){
