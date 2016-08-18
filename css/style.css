@@ -1,26 +1,120 @@
+/**** GLOBAL STYLES ******/
+
 * {
-	padding:0;
-	margin:0;
+	padding: 0;
+	margin: 0;
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
   	box-sizing: border-box;
 }
+.centered {
+	text-align: center;
+}
+.serif {
+	font-family: 'PT Serif', serif;
+}
+.blacktext {
+	color: black!important;
+}
+.whitetext {
+	color: white!important;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+/******** NAVBAR (affixed to top) ******/
 
 .nav-text {
 	color:black;
 }
-
 .brand-logo {
 	color:black!important;
 }
+.header-top {
+	line-height: 0px;
+}
 
-.centered {
+/****** HEADER AND INTRO ***************/
+
+.photo {
+	width:100%;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+#intro{
+	margin-top:0;
+	padding: 30px;
+	background-color: #1291B2;
+}
+.aboutpara {
+	padding-left: 15%;
+	padding-right: 15%;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 35px;
+}
+
+@media only screen and (max-device-width: 736px) {
+	.aboutMobileSetting {
+		padding: 3.5%;
+		text-align: justify;
+	}
+}
+
+@media only screen and (max-device-width:471px) {
+	.each-project {
+		width:100%!important;
+		padding: 2% 4%;
+	}
+	.copyright {
+		display: inline-block;
+		background-color:blue;
+	}
+	.img-responsive {
+	width:100%;
+	}
+	.hiddenMobile {
+		display:none;
+	}
+}
+
+/********PROJECT SECTION **************/
+
+.forAnchor {
+	background-color: #8FC7A6;
+}
+.modal-title {
+	color: #336666;
+}
+.project-section {
+	width:100%;
+	margin: 0 auto;
 	text-align: center;
+	background-color: floralwhite;
+}
+.each-project {
+	width: 50%;
+	background-color: #8FC7A6;
+	float:left;
+	padding: 2%;
+}
+.each-project:hover {
+	background-color: floralwhite;
+	cursor: pointer;
+}
+.proj-img {
+	width:100%;
+}
+.bg {
+	background-color: floralwhite;
 }
 
-.blacktext {
-	color: black!important;
-}
+/******** CONTACT SECTION ***********/
 
 hr.styleline {
 	height: 1px;
@@ -31,180 +125,31 @@ hr.styleline {
 	border: 0 none;
 }
 
-.whitetext {
-	color: white!important;
-}
-
-.header-top {
-	line-height: 0px;
-}
-
-#intro{
-	margin-top:0px;
-	padding: 30px;
-	background-color: #1291B2;
-}
-
-.photo {
-	width:100%;
-	margin-bottom:0px;
-	padding-bottom:0px;
-}
-
-.aboutpara {
-	padding-left: 15%;
-	padding-right: 15%;
-	font-family: 'Open Sans', sans-serif;
-	line-height: 35px;
-}
-
-
-@media only screen and (max-device-width: 736px) {
-	.aboutMobileSetting {
-		padding: 4%;
-		text-align: justify;
-	}
-}
-
-@media only screen and (max-device-width:400px) {
-
-	.each-project {
-		width:100%!important;
-		padding: 2% 4%;
-	}
-	.copyright {
-		display: inline-block;
-		background-color:blue;
-	}
-
-	.headshot {
-		margin: 0 auto!important;
-		position: relative;
-		
-		/*display:none*/;
-	}
-
-	.headshot-pic {
-		
-
-	}
-
-}
-.serif {
-	font-family: 'PT Serif', serif;
-}
-
-/*Slider Section*/
-
-.floralwhitebg {
-	background-color: floralwhite;
-}
-
-.modal-title {
-	color: #336666;
-}
-
-ul li:hover {
-	cursor: pointer;
-}
-
-.project-section {
-/*	padding-top: 45px;*/
-	width:100%;
-	margin: 0 auto;
-	text-align: center;
-	background-color: white;
-}
-
-.each-project {
-	width: 49%;
-	background-color:pink;
-	float:left;
-	padding: 2%;
-}
-
-
-.project-bg {
-
-	background-color: blue!important;
-}
-
-.bg {
-	background-color: floralwhite;
-}
-
-.img-responsive {
-	width:100%;
-}
-
-
-.hidden {
-	display:none;
-}
-/*Contact Footer Section*/
-
 .contact-area {
 	background-color: deeppink;
 	width:100%;
 }
-
 .contact {
 	display:inline-block;
 }
-
 .pad-left {
 	padding-left: 15px;
 }
-
 .pad-left-bottom {
 	padding-left: 15px;
 	padding-bottom: 7px;
 }
-
 .headshot {
 	float:right;
 	padding-right:25px;
 	display:inline-block;
 }
-
 .headshot-pic {
 	border-radius: 50%;
 }
-
 footer {
 	text-align: center;
-
 }
-
 .blkbg {
 	background-color: black;
-}
-
-/*	@media screen and (max-width: 500px) { 
-		#project-page-text {
-			float:left!important;
-		}
-		.project-page-img{
-			float:left!important;
-		}
-	 }*/
-.clearfix:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-}
-
-
-/*Project Page Section*/
-#proj-page-title {
-	
-	position: absolute;
-    color: white!important;
-    display: inline-block;
-    font-size: 2.1rem;
-    padding: 0;
-    white-space: nowrap; 
 }
