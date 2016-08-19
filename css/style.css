@@ -94,7 +94,11 @@
 	width:100%;
 	margin: 0 auto;
 	text-align: center;
-	background-color: floralwhite;
+	background-color: #8FC7A6;
+}
+
+.project-bg {
+	padding: 0 2%;
 }
 .each-project {
 	width: 50%;
