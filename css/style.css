@@ -129,7 +129,11 @@ hr.styleline {
 
 .contact-area {
 	background-color: deeppink;
-	width:100%;
+	padding: 2% 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 .contact {
 	display:inline-block;
@@ -143,7 +147,6 @@ hr.styleline {
 }
 .headshot {
 	float:right;
-	padding-right:25px;
 	display:inline-block;
 }
 .headshot-pic {
