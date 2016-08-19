@@ -73,10 +73,9 @@
 	}
 	.copyright {
 		display: inline-block;
-		background-color:blue;
 	}
 	.img-responsive {
-	width:100%;
+		width:100%;
 	}
 	.hiddenMobile {
 		display:none;
