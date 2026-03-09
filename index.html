@@ -1,135 +1,339 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name=viewport content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="gLW0hrO46DSWA1SQN2fX5ajh8J3ikEOSWnE5WjCxENo" />
-  <title>Mae Fang | Web Developer</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-  <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mae F.</title>
+    <style>
+        :root {
+            --bg: #f4f1ea;
+            --text: #1b1b1b;
+            --muted: #6e6862;
+            --muted-2: #8f8880;
+            --border: #e8e2d8;
+            --card: #ffffff;
+            --chrome: #f7f4ee;
+            --chrome-border: #eee7dc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 64px 32px;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 0.95fr 1.05fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .name {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(3rem, 7vw, 4rem);
+            line-height: 1.05;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            margin-top: 8px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.75rem;
+            line-height: 1.2;
+            color: var(--muted);
+        }
+
+        .intro-strong,
+        .intro-soft {
+            max-width: 34rem;
+            font-size: 1.125rem;
+            margin: 24px 0 0;
+        }
+
+        .intro-strong {
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .intro-soft {
+            color: var(--muted-2);
+            line-height: 1.6;
+        }
+
+        .links {
+            margin-top: 32px;
+            font-size: 0.95rem;
+            color: #3d3a36;
+        }
+
+        .links-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .links-row a,
+        .project-link {
+            text-underline-offset: 4px;
+        }
+
+        .certificate {
+            margin-top: 16px;
+            max-width: 420px;
+        }
+
+        .certificate img {
+            width: 100%;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+        }
+
+        .project-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 32px 40px;
+        }
+
+        .eyebrow-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+            font-size: 0.75rem;
+            color: var(--muted-2);
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+        }
+
+        .mockup {
+            margin-bottom: 32px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: linear-gradient(to bottom, #ffffff, #f8f6f2);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        .browser-bar {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--chrome-border);
+            background: var(--chrome);
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+        }
+
+        .dot-1 {
+            background: #d9b6b0;
+        }
+
+        .dot-2 {
+            background: #e6d3a6;
+        }
+
+        .dot-3 {
+            background: #b7c9b1;
+        }
+
+        .project-title {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 1.15;
+        }
+
+        .project-description {
+            margin: 12px 0 0;
+            max-width: 42rem;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .feature-list {
+            margin: 20px 0 0;
+            padding-left: 18px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 0.95rem;
+        }
+
+        .focus {
+            margin-top: 96px;
+            max-width: 760px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--muted-2);
+        }
+
+        .focus-label {
+            margin-bottom: 12px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--muted-2);
+        }
+
+        .focus p {
+            margin: 0 0 12px;
+        }
+
+        .focus ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        @media (max-width: 900px) {
+            .page {
+                padding: 48px 20px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .project-card {
+                padding: 24px;
+            }
+
+            .subtitle {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <a name="top">
+    <main class="page">
+        <section class="hero">
+            <div>
+                <h1 class="name">Mae F.</h1>
+                <div class="subtitle">End-to-end website strategist and builder</div>
 
-    <!-- NAVBAR -->
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper white">
-          <a href="#top" class="brand-logo center nav-text">Mae Fang</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a class="nav-text" href="#about-me">About</a></li>
-            <li><a class="nav-text" href="#project-area">Projects</a></li>
-            <li><a class="nav-text" href="http://www.maefang.com/blog">Blog</a></li>
-            <li><a class="nav-text" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+                <p class="intro-strong">
+                    I work across the full website lifecycle — strategy, UX, analytics, optimization, and implementation
+                    - and I build AI-powered digital products that serve niche needs.
+                </p>
 
-    <!-- TOP SECTION -->
-    <div class="header-top"><img src="images/Header.jpg" alt="header" class="photo"><a name="about-me"></div>
+                <div class="links">
+                    <div class="links-row">
+                        <a href="https://www.linkedin.com/in/maefang" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a>
+                        <a href="#">Generative AI for Marketing Professional Certificate (American Marketing
+                            Association)</a>
+                    </div>
 
-    <div id="intro">
-      <br />
-      <br />
-      <br />
-      <h4 class="centered serif whitetext">Front-end web developer.</h4>
+                    <div class="certificate">
+                        <img src="images/AMA-GenAI-Cert.png"
+                            alt="Generative AI for Marketing Professional Certificate issued by the American Marketing Association" />
+                    </div>
+                </div>
+            </div>
 
-      <h5 class="aboutpara aboutMobileSetting whitetext">
-        I enjoy making things and making a difference. On the to-do list: Redoing this site which is a few years old!
-      </h5>
-      <!--After working at various nonprofits in New York City for five years, I decided to immerse myself in studying web development
-        as a way to express creativity and build what I envision. Likes: full stack Javascript, easy to navigate
-        websites and mostly I just like learning and developing applications with a real-world focus.
-      <em>Currently working on:</em> exploring the ins-and-outs of Genesis custom themes.
-       -->
+            <div>
+                <article class="project-card">
+                    <div class="eyebrow-row">
+                        <div class="eyebrow">Selected Project</div>
+                        <div>Full Web App</div>
+                    </div>
 
+                    <div class="mockup">
+                        <div class="browser-bar">
+                            <span class="dot dot-1"></span>
+                            <span class="dot dot-2"></span>
+                            <span class="dot dot-3"></span>
+                        </div>
+                        <img src="images/sew-whats-next.png" alt="Sew What's Next sewing planner dashboard" />
+                    </div>
 
-      <a name="project-area">
-        <br />
-        <br />
-    </div>
+                    <h2 class="project-title">Sew What's Next</h2>
 
-    <!-- PROJECT SECTION -->
-    <div class="forAnchor hiddenMobile">
-      <br /><br />
-    </div>
-    <div class="project-section clearfix">
-      <div class="project-bg">
-        <!--  MODAL - RECIPE BOX -->
-        <div class="each-project">
-          <img class="proj-img modal-trigger" href="#modal4" src="images/recipe-box.gif" alt="Recipe Box app">
-        </div>
-        <!-- LINK TO MTA PAGE-->
-        <div class="each-project">
-          <a href="mta-project.html">
-            <img class="proj-img" src="images/mta-app.gif" alt="MTA app"></a>
-        </div class="each-project">
-      </div>
-    </div>
-    <div class="forAnchor hiddenMobile">
-      <br /><br />
-    </div>
+                    <p class="project-description">
+                        Helps you plan sewing projects by seeing the fabrics and patterns you already own and surfacing
+                        inspiration for what to make next.
+                    </p>
 
-    <div id="modal4" class="modal">
-      <div class="modal-content centered">
-        <h4 class="serif modal-title">Recipe Box</h4>
-        <p><a href="https://recipe-box-app.herokuapp.com">Live Site | </a><a
-            href="https://github.com/mmmfang/recipes">View code on Github</a></p>
-        <br />
-        <p>A CRUD App built with Rails and AngularJS that acts like a digital recipe box.</p>
-      </div>
-    </div>
+                    <ul class="feature-list">
+                        <li>Pinterest-powered inspiration</li>
+                        <li>Secure login and user authentication</li>
+                        <li>CSV import plus manual data entry</li>
+                        <li>Pulls pattern information from online sources</li>
+                        <li>Stripe-ready for future paid access if needed</li>
+                    </ul>
 
-    <!-- CONTACT SECTION -->
-    <div class="contact-area clearfix">
-      <a name="contact">
-        <br />
-        <div class="contact">
-          <h3 class="whitetext serif">Get in Contact</h3>
-          <i class="fa fa-envelope-o whitetext fa-2x pad-left-bottom"></i><a
-            class="white-text right-align pad-left-bottom" href="mailto:mae.fang@gmail.com"> mae.fang@gmail.com</a>
-          <br />
-          <i class="fa fa-github whitetext fa-2x pad-left-bottom"></i> <a class="white-text right-align pad-left-bottom"
-            href="https://github.com/mmmfang"> https://github.com/mmmfang</a>
-          <br />
-          <i class="fa fa-linkedin-square whitetext fa-2x pad-left-bottom"></i> <a
-            class="white-text right-align pad-left-bottom" href="http://www.linkedin.com/in/maefang">
-            https://www.linkedin.com/in/maefang</a>
-          <br />
-          <br />
-        </div>
-        <br />
-        <br />
-    </div>
+                    <a class="project-link" href="#">Open app</a>
+                </article>
+            </div>
+        </section>
 
-    <!-- FOOTER -->
-    <footer class="blkbg">
-      <br />
-      <p class="whitetext copyright">&copy; Copyright Mae Fang - 2015</p>
-      <br />
-    </footer>
+        <section class="focus">
+            <div class="focus-label">Professional Focus</div>
 
-    <script src="scripts/materialize.min.js"></script>
-    <script src="scripts/app.js"></script>
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date(); a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            <p>
+                I'm a senior web manager who optimizes high-traffic digital properties for better user experiences and
+                stronger marketing performance.
+            </p>
 
-      ga('create', 'UA-71324077-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+            <p>
+                I’ve built, improved, experimented on, and iterated many websites to drive better results, and have also
+                served as the technical lead for a full website redesign and rebrand.
+            </p>
+
+            <ul>
+                <li>Website strategy and roadmap planning</li>
+                <li>UX improvements and information architecture</li>
+                <li>Analytics, experimentation, and CRO</li>
+                <li>Platform management and technical implementation</li>
+            </ul>
+        </section>
+    </main>
 </body>
 
 </html>
