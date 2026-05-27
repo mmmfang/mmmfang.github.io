@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mae F.</title>
+    <title>Mae F. — Web Strategist &amp; AI Product Builder</title>
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
@@ -29,6 +29,18 @@
             scroll-behavior: smooth;
         }
 
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
         body {
             margin: 0;
             background: var(--bg);
@@ -51,11 +63,13 @@
             padding: 64px 32px;
         }
 
-        .hero {
+        /* ── Bio row: name left, cert right ── */
+        .bio-row {
             display: grid;
-            grid-template-columns: 0.95fr 1.05fr;
+            grid-template-columns: 1fr 1fr;
             gap: 64px;
             align-items: start;
+            margin-bottom: 64px;
         }
 
         .name {
@@ -74,21 +88,12 @@
             color: var(--muted);
         }
 
-        .intro-strong,
-        .intro-soft {
+        .intro-strong {
             max-width: 34rem;
             font-size: 1.125rem;
             margin: 24px 0 0;
-        }
-
-        .intro-strong {
             color: var(--muted);
             line-height: 1.75;
-        }
-
-        .intro-soft {
-            color: var(--muted-2);
-            line-height: 1.6;
         }
 
         .links {
@@ -120,11 +125,27 @@
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
         }
 
-        .project-card {
+        /* ── Projects stack ── */
+        .projects-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 96px;
+        }
+
+        .section-eyebrow {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: var(--muted-2);
+            margin-bottom: 16px;
+        }
+
+        /* ── Shared card base ── */
+        .card {
             background: var(--card);
             border: 1px solid var(--border);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-            padding: 32px 40px;
         }
 
         .eyebrow-row {
@@ -135,20 +156,30 @@
             margin-bottom: 16px;
             font-size: 0.75rem;
             color: var(--muted-2);
-        }
-
-        .eyebrow {
             text-transform: uppercase;
             letter-spacing: 0.18em;
         }
 
-        .mockup {
-            margin-bottom: 32px;
+        /* ── Sew What's Next: full width, side-by-side inside ── */
+        .sew-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             overflow: hidden;
-            border: 1px solid var(--border);
-            border-radius: 10px;
+        }
+
+        .sew-text {
+            padding: 40px 40px 40px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .sew-preview {
             background: linear-gradient(to bottom, #ffffff, #f8f6f2);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            border-left: 1px solid var(--border);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .browser-bar {
@@ -158,6 +189,7 @@
             padding: 10px 12px;
             border-bottom: 1px solid var(--chrome-border);
             background: var(--chrome);
+            flex-shrink: 0;
         }
 
         .dot {
@@ -178,8 +210,15 @@
             background: #b7c9b1;
         }
 
+        .sew-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
         .project-title {
-            margin: 0;
+            margin: 0 0 12px;
             font-family: Georgia, "Times New Roman", serif;
             font-size: 2rem;
             font-weight: 400;
@@ -187,15 +226,14 @@
         }
 
         .project-description {
-            margin: 12px 0 0;
-            max-width: 42rem;
+            margin: 0 0 12px;
             color: var(--muted);
             font-size: 0.95rem;
             line-height: 1.7;
         }
 
         .feature-list {
-            margin: 20px 0 0;
+            margin: 8px 0 0;
             padding-left: 18px;
             color: var(--muted);
             font-size: 0.95rem;
@@ -206,10 +244,48 @@
             display: inline-block;
             margin-top: 20px;
             font-size: 0.95rem;
+            text-underline-offset: 4px;
         }
 
+        /* ── Transit card: full width, text left, phone right, compact ── */
+        .transit-card {
+            display: grid;
+            grid-template-columns: 1fr 260px;
+            overflow: hidden;
+        }
+
+        .transit-text {
+            padding: 36px 40px;
+        }
+
+        .transit-title {
+            margin: 0 0 12px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            line-height: 1.15;
+        }
+
+        .transit-private {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--muted-2);
+            font-style: italic;
+        }
+
+        /* ── Phone mockup ── */
+        .transit-phone-panel {
+            background: #111;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            border-left: 1px solid #000;
+        }
+
+        /* ── Professional Focus ── */
         .focus {
-            margin-top: 96px;
             max-width: 760px;
             font-size: 0.95rem;
             line-height: 1.7;
@@ -217,8 +293,9 @@
         }
 
         .focus-label {
-            margin-bottom: 12px;
+            margin: 0 0 12px;
             font-size: 0.75rem;
+            font-weight: 400;
             text-transform: uppercase;
             letter-spacing: 0.18em;
             color: var(--muted-2);
@@ -233,22 +310,48 @@
             padding-left: 18px;
         }
 
+        /* ── Responsive ── */
         @media (max-width: 900px) {
             .page {
                 padding: 48px 20px;
             }
 
-            .hero {
+            .bio-row {
                 grid-template-columns: 1fr;
                 gap: 40px;
-            }
-
-            .project-card {
-                padding: 24px;
+                margin-bottom: 40px;
             }
 
             .subtitle {
                 font-size: 1.4rem;
+            }
+
+            .sew-card {
+                grid-template-columns: 1fr;
+            }
+
+            .sew-preview {
+                border-left: none;
+                border-top: 1px solid var(--border);
+                min-height: 240px;
+            }
+
+            .sew-text {
+                padding: 24px;
+            }
+
+            .transit-card {
+                grid-template-columns: 1fr;
+            }
+
+            .transit-phone-panel {
+                border-left: none;
+                border-top: 1px solid #000;
+                min-height: 200px;
+            }
+
+            .transit-text {
+                padding: 24px;
             }
         }
     </style>
@@ -256,10 +359,12 @@
 
 <body>
     <main class="page">
-        <section class="hero">
+
+        <!-- ── Bio row ── -->
+        <section class="bio-row">
             <div>
-                <h1 class="name">Mae F.</h1>
-                <div class="subtitle">End-to-end website strategist and builder</div>
+                <h1 class="name">Mae F. <span class="sr-only">— Web Strategist &amp; AI Product Builder</span></h1>
+                <p class="subtitle">End-to-end website strategist and builder</p>
 
                 <p class="intro-strong">
                     I work across the full website lifecycle - strategy, UX, analytics, optimization, and implementation
@@ -274,52 +379,99 @@
                             href="https://www.linkedin.com/learning/certificates/5e3b7d6478be32f82a70dec143a4d39054cc85f62c31d0917000b6057eb4221a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B0TggA9BYS2qH12WsCttmfA%3D%3D">Generative
                             AI for Marketing Certificate (AMA)</a>
                     </div>
-
                     <div class="certificate">
-                        <img src="images/AMA-GenAI-Cert.jpeg" alt="enerative AI for Marketing Professional Certificate (American Marketing
-                            Association)" />
+                        <img src="images/AMA-GenAI-Cert.jpeg"
+                            alt="Generative AI for Marketing Professional Certificate (American Marketing Association)" />
                     </div>
                 </div>
             </div>
 
-            <div>
-                <article class="project-card">
+            <!-- Right col: intentionally left for balance, cert image above handles it -->
+            <div></div>
+        </section>
+
+        <!-- ── Projects ── -->
+        <div class="projects-stack">
+
+            <div class="section-eyebrow">Selected Projects</div>
+
+            <!-- Sew What's Next — full width, horizontal inside -->
+            <article class="card sew-card">
+                <div class="sew-text">
                     <div class="eyebrow-row">
-                        <div class="eyebrow">Selected Project</div>
-                        <div>Full Web App</div>
+                        <span>Sew What's Next</span>
+                        <span>Full Web App</span>
                     </div>
 
-                    <div class="mockup">
-                        <div class="browser-bar">
-                            <span class="dot dot-1"></span>
-                            <span class="dot dot-2"></span>
-                            <span class="dot dot-3"></span>
-                        </div>
-                        <img src="images/sew-whats-next.png" alt="Sew What's Next sewing planner dashboard" />
-                    </div>
-
-                    <h2 class="project-title">Sew What's Next</h2>
+                    <h2 class="project-title">Sew What's Next — AI-powered sewing project planner</h2>
 
                     <p class="project-description">
-                        Plan sewing projects by seeing the fabrics and patterns you already own (your stash) and get
-                        inspired for what to make next.
+                        Built for sewists, home sewers, and sewing hobbyists who want to get more from their fabric
+                        stash. Sew What's Next answers the question every home sewer faces — what should I make with
+                        what I already own? Browse your stash, match patterns to fabric automatically, and get
+                        AI-generated styling ideas, all in one place. No download required.
                     </p>
 
                     <ul class="feature-list">
-                        <li>Pinterest-powered inspiration</li>
-                        <li>Secure login and user authentication</li>
-                        <li>CSV import plus manual data entry</li>
-                        <li>Pulls pattern information from online sources</li>
-                        <li>Stripe-ready for future subscription access</li>
+                        <li>Pattern-to-fabric matching engine — automatically pairs patterns to your stash based on
+                            fabric type, yardage, and stretch requirements</li>
+                        <li>AI styling inspiration — generates curated project ideas per pattern with Pinterest search
+                            integration</li>
+                        <li>Pattern envelope OCR — photograph a pattern envelope and AI extracts all metadata
+                            automatically</li>
+                        <li>Full fabric stash management — photos, yardage, cost tracking, CSV bulk import, and stash
+                            value totals</li>
+                        <li>Create a free account to save your stash and patterns, or explore the full experience
+                            instantly with demo mode — no sign-up needed</li>
+                        <li>Mobile-first design with dark and light mode — works on any device, any screen</li>
                     </ul>
 
                     <a class="project-link" href="https://sew-whats-next.lovable.app/demo" target="_blank">Open app</a>
-                </article>
-            </div>
-        </section>
+                </div>
 
+                <div class="sew-preview">
+                    <div class="browser-bar">
+                        <span class="dot dot-1"></span>
+                        <span class="dot dot-2"></span>
+                        <span class="dot dot-3"></span>
+                    </div>
+                    <img src="images/sew-whats-next.png" alt="Sew What's Next sewing planner dashboard" />
+                </div>
+            </article>
+
+            <!-- Transit PWA — full width, compact -->
+            <article class="card transit-card">
+                <div class="transit-text">
+                    <div class="eyebrow-row">
+                        <span>One-Tap Transit</span>
+                        <span>PWA</span>
+                    </div>
+
+                    <h2 class="transit-title">One-Tap Transit — Accessible PWA for public transport users</h2>
+
+                    <p class="project-description">
+                        Built a personalized progressive web app for a senior citizen who needed to use public transit
+                        to travel to recurring medical appointments. The multi-step process of searching for directions
+                        and checking for delays was turned into a single tap on their home screen — removing stress and
+                        the need to type on the keyboard. A small but meaningful example of how AI-assisted development
+                        can rapidly create customized tools for real-world needs.
+                    </p>
+
+                    <span class="transit-private">Private project — link not shared to protect user privacy.</span>
+                </div>
+
+                <div class="transit-phone-panel">
+                    <img src="images/transit-app-pwa.png"
+                        alt="One-Tap Transit app showing a single-button interface for getting directions to a medical appointment via public transit"
+                        style="max-width: 160px; width: 100%; display: block;" />
+                </div>
+            </article>
+
+        </div>
+
+        <!-- ── Professional Focus ── -->
         <section class="focus">
-            <div class="focus-label">Professional Focus</div>
+            <h2 class="focus-label">Professional Focus</h2>
 
             <p>
                 I'm a senior web manager who optimizes high-traffic digital properties for better user experiences and
@@ -327,7 +479,7 @@
             </p>
 
             <p>
-                I’ve built, improved, experimented on, and iterated many websites to drive better results, and have also
+                I've built, improved, experimented on, and iterated many websites to drive better results, and have also
                 served as the technical lead for a full website redesign and rebrand.
             </p>
 
@@ -338,6 +490,7 @@
                 <li>Platform management and technical implementation</li>
             </ul>
         </section>
+
     </main>
 </body>
 
