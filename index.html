@@ -11,7 +11,7 @@
     <link rel="icon" href="./favicon_io/favicon.ico">
     <style>
         :root {
-            --bg: #f4f1ea;
+            --bg: #ffffff;
             --text: #1b1b1b;
             --muted: #6e6862;
             --muted-2: #8f8880;
@@ -60,15 +60,19 @@
         .page {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 64px 32px;
+            padding: 34px 32px;
         }
 
         /* ── Bio row: name left, cert right ── */
         .bio-row {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2fr 1fr;
             gap: 64px;
             align-items: start;
+            margin-bottom: 64px;
+            background: linear-gradient(180deg, #fdfaf5 0%, #f2e8d5 100%);
+            padding: 48px 40px;
+            border-radius: 12px;
             margin-bottom: 64px;
         }
 
@@ -146,6 +150,7 @@
             background: var(--card);
             border: 1px solid var(--border);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border-radius: 12px;
         }
 
         .eyebrow-row {
@@ -213,7 +218,7 @@
         .sew-preview img {
             width: 100%;
             object-fit: cover;
-            object-position: top center;
+            object-position: top;
         }
 
         .project-title {
@@ -312,7 +317,7 @@
         /* ── Responsive ── */
         @media (max-width: 900px) {
             .page {
-                padding: 48px 20px;
+                padding: 28px 20px;
             }
 
             .bio-row {
